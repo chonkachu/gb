@@ -12,7 +12,7 @@ struct Cpu {
     uint16_t af;
     // registers BC DE HL, from which we can access high or low 8 bits
     uint16_t regs[3];
-    uint16_t sp;
+    uint16_t sp = 64*1024 - 1;
     uint16_t pc;
     
     uint8_t mem[64*1024];
